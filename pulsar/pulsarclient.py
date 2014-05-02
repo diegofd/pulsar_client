@@ -3,7 +3,7 @@ import httplib
 import urllib
 
 
-class ControlServer:
+class PulsarClient:
     server = "192.168.56.101"
     port = 80
 
@@ -22,6 +22,6 @@ class ControlServer:
     	response = conn.getresponse()
 
 if __name__ == '__main__':
-	controlserver = ControlServer()
-	controlserver.read()
-	controlserver.write()
+	pc = PulsarClient()
+	pc.read()
+	pc.write()

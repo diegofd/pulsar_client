@@ -4,30 +4,6 @@ import win32service
 import win32event
 import servicemanager
 
-import httplib
-# https://docs.python.org/2/library/httplib.html
-
-
-
-class Pulsador:
-    def __init__(self):
-        pass
-
-    def read(self):
-        pass
-
-    def write(self):
-        pass
-
-
-class ControlServer:
-    server = "192.168.100.2"
-    port = 80
-
-    def __init__(self):
-        pass
-
-
 class AppServerSvc (win32serviceutil.ServiceFramework):
     _svc_name_ = "TestService"
     _svc_display_name_ = "Test Service"
@@ -52,8 +28,8 @@ class AppServerSvc (win32serviceutil.ServiceFramework):
 
         # Loop:
         # - Read and write from control server
-        # - Read and write to serial port
 
+        # - Read and write to serial port
 
 if __name__ == '__main__':
     win32serviceutil.HandleCommandLine(AppServerSvc)
