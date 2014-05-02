@@ -4,6 +4,8 @@ import win32service
 import win32event
 import servicemanager
 
+import pulsar
+
 class AppServerSvc (win32serviceutil.ServiceFramework):
     _svc_name_ = "TestService"
     _svc_display_name_ = "Test Service"
